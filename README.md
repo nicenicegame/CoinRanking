@@ -1,5 +1,7 @@
 # Coin Ranking
 
+A coin ranking app developed using MVVM architecture
+
 GitHub Repository: [Coin Ranking](https://github.com/nicenicegame/CoinRanking)
 
 ## Getting Started
