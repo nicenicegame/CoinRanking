@@ -13,7 +13,7 @@ interface CoinRankingService {
     companion object {
         private const val BASE_URL = "https://api.coinranking.com/v1/public/"
 
-        fun create() =
+        fun create(): CoinRankingService =
             Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())

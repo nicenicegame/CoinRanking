@@ -1,5 +1,6 @@
 package com.example.coinranking.data
 
+import androidx.core.text.HtmlCompat
 import com.google.gson.annotations.SerializedName
 
 data class Coin(
@@ -10,7 +11,7 @@ data class Coin(
     @SerializedName("change")
     val change: Double,
     @SerializedName("circulatingSupply")
-    val circulatingSupply: Int,
+    val circulatingSupply: Double,
     @SerializedName("color")
     val color: String,
     @SerializedName("confirmedSupply")
@@ -52,7 +53,7 @@ data class Coin(
     @SerializedName("symbol")
     val symbol: String,
     @SerializedName("totalSupply")
-    val totalSupply: Int,
+    val totalSupply: Double,
     @SerializedName("type")
     val type: String,
     @SerializedName("uuid")
@@ -61,4 +62,12 @@ data class Coin(
     val volume: Long,
     @SerializedName("websiteUrl")
     val websiteUrl: String
-)
+) {
+
+    val descriptionString: String
+        get() = HtmlCompat.fromHtml(description, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
+            .replace("\n", "").trim()
+
+    val iconUrlPng: String
+        get() = iconUrl.replace(".svg", ".png")
+}
