@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Coin Ranking</string>
     <string name="coin_icon">Coin Icon</string>
+    <string name="error_image">Error Image</string>
+    <string name="error_text">"Error occurred during fetching data"</string>
 </resources>

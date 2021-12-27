@@ -8,10 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.coinranking.data.Coin
 import com.example.coinranking.databinding.ItemListCoinBinding
 
-class CoinAdapter : ListAdapter<Coin, CoinAdapter.CoinViewHolder>(CoinDiffCallback()) {
+class CoinsAdapter : ListAdapter<Coin, CoinsAdapter.CoinsViewHolder>(CoinDiffCallback()) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinViewHolder {
-        return CoinViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinsViewHolder {
+        return CoinsViewHolder(
             ItemListCoinBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
@@ -20,12 +20,12 @@ class CoinAdapter : ListAdapter<Coin, CoinAdapter.CoinViewHolder>(CoinDiffCallba
         )
     }
 
-    override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CoinsViewHolder, position: Int) {
         val coin = getItem(position)
         holder.bind(coin)
     }
 
-    class CoinViewHolder(private val binding: ItemListCoinBinding) :
+    class CoinsViewHolder(private val binding: ItemListCoinBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Coin) {
