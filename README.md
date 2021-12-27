@@ -6,4 +6,4 @@ This project uses the Gradle build system. To build this project, use the gradle
 
 ## Screenshots
 
-![Coin Ranking App](screenshots/coin_ranking_image.png "Coin Ranking App")
+<img src="screenshots/coin_ranking_image.png" alt="Coin Ranking App" width="200" />
